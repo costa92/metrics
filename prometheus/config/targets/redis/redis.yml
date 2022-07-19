@@ -1,0 +1,6 @@
+[
+  {
+    "targets": [ "172.16.0.112:9121"],
+    "labels":  {"env":"test","cluster":"test_one","alias":"test2"}
+  }
+]
