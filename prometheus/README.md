@@ -24,10 +24,20 @@ docker run \
  ```sh
 docker run \
     -p 9090:9090 \
-    -n prometheus \
+    --name prometheus \
     -v /path/to/config:/etc/prometheus \
     prom/prometheus 
  ```
+
+只允许本地访问：
+
+```sh
+sudo docker run  --name prometheus -d -p 127.0.0.1:9090:9090 -v /path/to/config:/etc/prometheus prom/prometheus
+```
+
+
+
+
 
 ### redis 配置
 
@@ -101,11 +111,20 @@ $ tar xf redis_exporter-v0.21.2.linux-amd64.tar.gz -C /usr/local/redis_exporter/
 ## 有密码
 redis_exporter  -redis.addr 127.0.0.1:6379  -redis.password 123456 
 ```
+
+
 参考：https://wiki.eryajf.net/pages/2497.html#_2%E3%80%81redis-exporter-%E7%94%A8%E6%B3%95
 
 3. 重启 prometheus 
 
+配置 redis_exporter 在 Grafana  导入模板
 
+ Dashboard 模板：https://grafana.com/dashboards/763
 
+![image-20220720152207975](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152207975.png)
 
+![image-20220720152237703](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152237703.png)
 
+导入成功后：
+
+![image-20220720152340999](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152340999.png)
