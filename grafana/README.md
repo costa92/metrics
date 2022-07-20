@@ -11,7 +11,7 @@ docker run -d --name grafana  -p 3000:3000 grafana/grafana grafana
 docker run config
 
 ```sh
-docker run -d --name grafana -p 3000:3000  -v /home/hellotalk/code/soft/grafana/grafana.ini:/etc/grafana/grafana.ini grafana/grafana grafana
+docker run -d --name grafana -p 3000:3000  -v /to/path/grafana.ini:/etc/grafana/grafana.ini grafana/grafana grafana
 ```
 
 
