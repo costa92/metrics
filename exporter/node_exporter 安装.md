@@ -84,7 +84,29 @@ ss -tunlp|grep node
       - targets: ["172.16.0.112:9100"]
 ```
 
-重新启动Prometheus Server
+如下监控指标：
+
+​	node_boot_time：系统启动时间
+
+​	node_cpu：系统CPU使用量
+
+​	node*disk**：磁盘IO
+
+​	node*filesystem**：文件系统用量
+
+​	node_load1：系统负载
+
+​	node*memeory**：内存使用量
+
+​	node*network**：网络带宽
+
+​	node_time：当前系统时间
+
+​	go_*：node exporter中go相关指标
+
+​	process_*：node exporter自身进程相关运行指标
+
+**重新启动Prometheus Server**
 
 访问http://localhost:9090，进入到Prometheus Server。如果输入“up”并且点击执行按钮以后，可以看到如下结果：
 

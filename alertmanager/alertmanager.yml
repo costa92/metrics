@@ -1,0 +1,39 @@
+global:
+  resolve_timeout: 5m
+  smtp_from: 'xxxx@qq.com' # 发件人
+  smtp_smarthost: 'smtp.qq.com:465' # 邮箱服务器的 POP3/SMTP 主机配置 smtp.qq.com 端口为 465 或 587
+  smtp_auth_username: 'xxxx@qq.com' # 用户名
+  smtp_auth_password: 'xxxxx' # 授权码 不是 QQ 密码
+  smtp_require_tls: false
+  smtp_hello: 'qq.com'
+templates:
+  - '/etc/alertmanager/template/email.tmpl'
+route:
+  group_by: ['alertname'] # 告警分组
+  group_wait: 5s # 在组内等待所配置的时间，如果同组内，5 秒内出现相同报警，在一个组内出现。
+  group_interval: 5m # 如果组内内容不变化，合并为一条警报信息，5 分钟后发送。
+  repeat_interval: 5m # 发送告警间隔时间 s/m/h，如果指定时间内没有修复，则重新发送告警
+  receiver: 'email' # 优先使用 email 发送
+  routes: #子路由，使用 email 发送
+  - receiver: email
+    match_re:
+      serverity: email
+receivers:
+- name: 'email'
+  email_configs:
+  - to: 'xxx@163.com' # 如果想发送多个人就以 ',' 做分割
+    send_resolved: true
+- name: 'wechat'
+  wechat_configs:
+  - corp_id: 'xxxxxxxxxxxxx' #企业 ID
+    api_url: 'https://qyapi.weixin.qq.com/cgi-bin/' # 企业微信 api 接口 统一定义
+    to_party: '2'  # 通知组 ID
+    agent_id: '1000002' # 新建应用的 agent_id
+    api_secret: 'xxxxxxxxxxxxxx' # 生成的 secret
+    send_resolved: true
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'dev', 'instance']

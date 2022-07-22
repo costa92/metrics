@@ -8,11 +8,12 @@ global:
 alerting:
   alertmanagers:
     - static_configs:
-        - targets:
+      - targets: ["172.16.0.112:9093"]
           # - alertmanager:9093
 
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
+  - "memory_over.yml"
   # - "first_rules.yml"
   # - "second_rules.yml"
 
