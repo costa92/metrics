@@ -1,6 +1,6 @@
 global:
   resolve_timeout: 5m
-  smtp_from: 'xxxx@qq.com' # 发件人
+  smtp_from: 'xxxxxx@qq.com' # 发件人
   smtp_smarthost: 'smtp.qq.com:465' # 邮箱服务器的 POP3/SMTP 主机配置 smtp.qq.com 端口为 465 或 587
   smtp_auth_username: 'xxxx@qq.com' # 用户名
   smtp_auth_password: 'xxxxx' # 授权码 不是 QQ 密码
@@ -21,7 +21,7 @@ route:
 receivers:
 - name: 'email'
   email_configs:
-  - to: 'xxx@163.com' # 如果想发送多个人就以 ',' 做分割
+  - to: 'xxxx@163.com' # 如果想发送多个人就以 ',' 做分割
     send_resolved: true
 - name: 'wechat'
   wechat_configs:

@@ -1,0 +1,33 @@
+groups:
+- name: redisdown
+  rules:
+  - alert: RedisDown
+    expr: redis_up == 0
+    for: 1m
+    labels:
+      name: instance
+      severity: Critical
+    annotations:
+      summary: " {{ $labels.alias }}"
+      description: " 服务停止运行 "
+      value: "{{ $value }}"
+  - alert: Redis linked too many clients
+    expr: redis_connected_clients / redis_config_maxclients * 100 > 80
+    for: 1m
+    labels:
+      name: instance
+      severity: Warning
+    annotations:
+      summary: " {{ $labels.alias }}"
+      description: " Redis连接数超过最大连接数的80%. "
+      value: "{{ $value }}"
+  - alert: Redis linked
+    expr: redis_connected_clients / redis_config_maxclients * 100 > 80
+    for: 1m
+    labels:
+      name: instance
+      severity: Warning
+    annotations:
+      summary: " {{ $labels.alias }}"
+      description: " Redis连接数超过最大连接数的80%. "
+      value: "{{ $value }}"
