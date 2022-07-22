@@ -105,3 +105,8 @@ ss -tunlp|grep node
 Dashboard 访问结果
 
 ![image-20220722124415834](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722124415834.png)
+
+或使用 https://grafana.com/grafana/dashboards/12486 模板
+
+![image-20220722140016993](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722140016993.png)
+
