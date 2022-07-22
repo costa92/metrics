@@ -121,10 +121,10 @@ redis_exporter  -redis.addr 127.0.0.1:6379  -redis.password 123456
 
  Dashboard 模板：https://grafana.com/dashboards/763
 
-![image-20220720152207975](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152207975.png)
+![image-20220720152207975](https://file.longqiuhong.com/uploads/picgo/image-20220720152207975.png)
 
-![image-20220720152237703](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152237703.png)
+![image-20220720152237703](https://file.longqiuhong.com/uploads/picgo/image-20220720152237703.png)
 
 导入成功后：
 
-![image-20220720152340999](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152340999.png)
+![image-20220720152340999](https://file.longqiuhong.com/uploads/picgo/image-20220720152340999.png)

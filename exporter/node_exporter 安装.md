@@ -110,25 +110,25 @@ ss -tunlp|grep node
 
 访问http://localhost:9090，进入到Prometheus Server。如果输入“up”并且点击执行按钮以后，可以看到如下结果：
 
-![image-20220722123621896](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722123621896.png)
+![image-20220722123621896](https://file.longqiuhong.com/uploads/picgo/image-20220722123621896.png)
 
 点击 菜单栏中的 status --> Tagrets 就会显示下面的数据
 
-![image-20220722123428217](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722123428217.png)
+![image-20220722123428217](https://file.longqiuhong.com/uploads/picgo/image-20220722123428217.png)
 
 ##  Grafana 导入  Dashboard 模板
 
 通过 https://grafana.com/dashboards 网站，可以找到大量可直接使用的Dashboard：比如我这里选择了热门模板（ID：8919），展示效果如下：
 
-![image-20220722124325787](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722124325787.png)
+![image-20220722124325787](https://file.longqiuhong.com/uploads/picgo/image-20220722124325787.png)
 
-![image-20220722124344748](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722124344748.png)
+![image-20220722124344748](https://file.longqiuhong.com/uploads/picgo/image-20220722124344748.png)
 
 Dashboard 访问结果
 
-![image-20220722124415834](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722124415834.png)
+![image-20220722124415834](https://file.longqiuhong.com/uploads/picgo/image-20220722124415834.png)
 
 或使用 https://grafana.com/grafana/dashboards/12486 模板
 
-![image-20220722140016993](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220722140016993.png)
+![image-20220722140016993](https://file.longqiuhong.com/uploads/picgo/image-20220722140016993.png)
 
