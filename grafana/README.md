@@ -57,10 +57,10 @@ docker run \
 
 导入数据源：
 
-![image-20220720151921052](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720151921052.png)
+![image-20220720151921052](https://file.longqiuhong.com/uploads/picgo/image-20220720151921052.png)
 
-![image-20220720151951271](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720151951271.png)
+![image-20220720151951271](https://file.longqiuhong.com/uploads/picgo/image-20220720151951271.png)
 
-![image-20220720152028452](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152028452.png)
+![image-20220720152028452](https://file.longqiuhong.com/uploads/picgo/image-20220720152028452.png)
 
-![image-20220720152044821](/home/hellotalk/snap/typora/57/.config/Typora/typora-user-images/image-20220720152044821.png)
+![image-20220720152044821](https://file.longqiuhong.com/uploads/picgo/image-20220720152044821.png)
